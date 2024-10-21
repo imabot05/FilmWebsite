@@ -243,6 +243,11 @@ CREATE TABLE `movie_seat_prices` (
     FOREIGN KEY (`movie_id`) REFERENCES `movies`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
+INSERT INTO `movie_seat_prices` (movie_id, seat_type, base_price) 
+VALUES 
+(1, 'VIP', 200000),
+(1, 'Regular', 150000);
+
 DROP TABLE IF EXISTS `seat_schedule_status`;
 CREATE TABLE `seat_schedule_status` (
     `id` INT NOT NULL AUTO_INCREMENT,
